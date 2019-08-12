@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       {BeerBox.map(item => (
-        <Beer *name*={item.name} />
+        <Beer name={item.name} />
       ))}
     </div>
   );

@@ -72,3 +72,7 @@ export default App;
   <Beers key={beer.id} name={beer.name} picture={beer.image} />
 ))}
 ```
+
+- `npm i prop-types`
+  - props가 잘못 전달 되었을 때 이를 알려주는 도구
+

@@ -155,3 +155,15 @@ class App extends React.Component {
   }
 }
 ```
+- 위의 경우는 state를 변경하기 때문에 좋은 방법은 아님,
+- 아래와 같이 current의 사용을 권함
+```javascript
+  plus = () => {
+    this.setState(current => ({ count: current.count + 1 }));
+  };
+  minus = () => {
+    this.setState(current => ({ count: current.count - 1 }));
+  };
+```
+
+## (중요)setState를 호출할 때마다 react는 새로운 state로 render를 다시 한다.

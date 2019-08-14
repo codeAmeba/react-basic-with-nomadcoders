@@ -23,7 +23,8 @@ function App() {
   );
 }
 ```
-- props(추가 공부 필요)
+- props
+	- [누구든지 하는 리액트 4편: props 와 state | VELOPERT.LOG](https://velopert.com/3629)
 - 자바스크립트의 문법을 대부분 그대로 쓸 수 있음
 ```javascript
 import React from 'react';
@@ -87,3 +88,70 @@ Beers.propTypes = {
 #### propTypes 참고
 - https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
 
+
+# TIL(190814) - React 03
+***
+- 컴포넌트에서 다루는 데이터는 두 종류
+	- props : 부모 컴포넌트가 자식 컴포넌트에게 주는 값
+	- state : 컴포넌트 내부에서 선언하고 내부에서 값을 변경할 수 있음.
+- 받아온 props 값은 this로 조회 가능함
+- 함수형 컴포넌트와 클래스형 컴포넌트의 주요 차이점
+	- 함수형에는 state와 life cycle이 빠져있음
+	- 함수형은 초기 마운트 속도가 약간 빠르고 불필요한 부분이 없어서 메모리를 덜 차지함
+
+- 클래스형 컴포넌트
+ - render() 필수
+```javascript
+class MyName extends Component {
+  static defaultProps = {
+    name: 'codeAmeba'
+  }
+  render() {
+    return (
+      <div>
+        hello. My Name is {this.props.name}
+      </div>
+    )
+  }
+}
+```
+
+- 함수형 컴포넌트
+```javascript
+const MyName = ({name}) => {
+  return <div>Hello. My Name is {name}</div>;
+};
+
+MyName.defaultProps = {
+  name: 'codeAmeba'
+};
+```
+
+- 동적인 데이터를 다룰 때에는 state를 사용함(ex: counter)
+ - state는 클래스형 컴포넌트에서만 가능
+```javascript
+class App extends React.Component {
+  state = {
+    count: 0
+  };
+  plus = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+  minus = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
+  };
+  render() {
+    return (
+      <div>
+        <h1>The number is {this.state.count}</h1>
+        <button onClick={this.plus}>Plus</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
+}
+```

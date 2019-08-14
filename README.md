@@ -65,7 +65,7 @@ export default App;
 
 # TIL(190813) - React 02
 ***
-<img src="/images/key_prop_warning.png" />
+<img src="key_prop_warning.png" />
 
 - props를 전달할 때 고유값을 전달하지 않으면 위와 같이 경고가 뜬다.
 - 따라서 props에 ID를 만들고 아래와 같이 key로 넘겨야 함.

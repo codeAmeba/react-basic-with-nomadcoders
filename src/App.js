@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const BeerBox = [
   {
@@ -38,7 +39,9 @@ function Beers({name, picture, rating}) {
 }
 
 Beers.propTypes = {
-
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  rating: PropTypes.number
 }
 
 function App() {

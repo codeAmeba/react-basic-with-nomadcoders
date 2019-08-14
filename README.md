@@ -64,7 +64,8 @@ export default App;
 
 # TIL(190813) - React 02
 ***
-<img src="/images/key_prop_warning.png">
+<img src="/images/key_prop_warning.png" />
+
 - props를 전달할 때 고유값을 전달하지 않으면 위와 같이 경고가 뜬다.
 - 따라서 props에 ID를 만들고 아래와 같이 key로 넘겨야 함.
 ```javascript
@@ -75,4 +76,14 @@ export default App;
 
 - `npm i prop-types`
   - props가 잘못 전달 되었을 때 이를 알려주는 도구
+  - 아래와 같이 각 필요한 데이터의 타입을 명시해준다
+```javascript
+Beers.propTypes = {
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired
+}
+```
+#### propTypes 참고
+- https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
 

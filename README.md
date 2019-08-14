@@ -100,7 +100,7 @@ Beers.propTypes = {
 	- 함수형은 초기 마운트 속도가 약간 빠르고 불필요한 부분이 없어서 메모리를 덜 차지함
 
 - 클래스형 컴포넌트
- - render() 필수
+  - render() 필수
 ```javascript
 class MyName extends Component {
   static defaultProps = {
@@ -128,7 +128,7 @@ MyName.defaultProps = {
 ```
 
 - 동적인 데이터를 다룰 때에는 state를 사용함(ex: counter)
- - state는 클래스형 컴포넌트에서만 가능
+  - state는 클래스형 컴포넌트에서만 가능
 ```javascript
 class App extends React.Component {
   state = {

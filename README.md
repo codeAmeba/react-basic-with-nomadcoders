@@ -204,9 +204,11 @@ class App extends React.Component {
   }
 }
 ```
+
 <img src="constructor_first.png">
 - constructor는 render보다 먼저 호출된다.
 - componentDidMount는 render 이후에 호출된다.
+
 ```javascript
 class App extends React.Component {
   state = {

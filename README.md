@@ -229,3 +229,18 @@ class App extends React.Component {
 
 #### 참고자료
 - https://reactjs-kr.firebaseapp.com/docs/state-and-lifecycle.html
+
+
+## Axios
+- fetch처럼 데이터를 받아올 때 사용함
+- async/await과 같이 사용 가능
+  - ex) axios가 데이터를 다 받아올 때까지 기다려달라
+
+```javascript
+  getMovies = async () => {
+    const movies = await axios.get('https://yts.lt/api/v2/list_movies.json');  
+  }
+```
+
+
+

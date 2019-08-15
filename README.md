@@ -84,6 +84,7 @@ Beers.propTypes = {
 ```
 #### propTypes 참고
 - https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html
+***
 
 
 # TIL(190814) - React 03
@@ -163,6 +164,7 @@ class App extends React.Component {
 ```
 
 ## (중요)setState를 호출할 때마다 react는 새로운 state로 render를 다시 한다.
+***
 
 
 # TIL(190815) - React 04

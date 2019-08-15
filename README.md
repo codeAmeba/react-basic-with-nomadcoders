@@ -167,3 +167,62 @@ class App extends React.Component {
 ```
 
 ## (중요)setState를 호출할 때마다 react는 새로운 state로 render를 다시 한다.
+
+
+# TIL(190815) - React 04
+***
+- class component는 render 외에도 많은 것을 갖고 있다.
+- 그 중의 하나가 life cycle method
+  - life cycle method는 react가 component를 생성하고 없애는 방법
+  - component가 생성될 때 render 이전에 호출되는 함수들이 있고, 이후에 호출되는 함수들이 있다.
+  - mounting / unmounting
+  - updating
+```javascript
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("this is constructor");
+  }
+  state = {
+    count: 0
+  };
+  plus = () => {
+    this.setState(current => ({ count: current.count + 1 }));
+  };
+  minus = () => {
+    this.setState(current => ({ count: current.count - 1 }));
+  };
+  render() {
+    console.log('this is render');
+    return (
+      <div>
+        <h1>The number is {this.state.count}</h1>
+        <button onClick={this.plus}>Plus</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
+}
+```
+<img src="constructor_first.png">
+- constructor는 render보다 먼저 호출된다.
+- componentDidMount는 render 이후에 호출된다.
+```javascript
+class App extends React.Component {
+  state = {
+    isLoading: true
+  };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({isLoading: false});
+    }, 3000);
+  }
+  render() {
+    const { isLoading } = this.state;
+    return <div>{isLoading ? 'Loading...' : 'We Are Ready!'}</div>;
+  }
+}
+```
+
+#### 참고자료
+- https://reactjs-kr.firebaseapp.com/docs/state-and-lifecycle.html

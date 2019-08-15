@@ -1,8 +1,6 @@
 # Movie App 2019 - React JS Practice
-***
 
 # TIL(190812) - React 01
-***
 - 리액트는 Virtual DOM
 	- [번역 리액트에 대해서 그 누구도 제대로 설명하기 어려운 것  – 왜 Virtual DOM 인가? | VELOPERT.LOG](https://velopert.com/3236)
 - JSX라는 리액트만의 문법이 존재함.
@@ -64,7 +62,6 @@ export default App;
 
 
 # TIL(190813) - React 02
-***
 <img src="key_prop_warning.png" />
 
 - props를 전달할 때 고유값을 전달하지 않으면 위와 같이 경고가 뜬다.
@@ -90,7 +87,6 @@ Beers.propTypes = {
 
 
 # TIL(190814) - React 03
-***
 - 컴포넌트에서 다루는 데이터는 두 종류
 	- props : 부모 컴포넌트가 자식 컴포넌트에게 주는 값
 	- state : 컴포넌트 내부에서 선언하고 내부에서 값을 변경할 수 있음.
@@ -170,7 +166,6 @@ class App extends React.Component {
 
 
 # TIL(190815) - React 04
-***
 - class component는 render 외에도 많은 것을 갖고 있다.
 - 그 중의 하나가 life cycle method
   - life cycle method는 react가 component를 생성하고 없애는 방법

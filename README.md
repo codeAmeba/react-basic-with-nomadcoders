@@ -239,5 +239,5 @@ class App extends React.Component {
   }
 ```
 
-# TIL(190816) - React 05
+# TIL(190817) - React 05
 

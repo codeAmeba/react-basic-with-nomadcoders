@@ -227,6 +227,7 @@ class App extends React.Component {
 #### 참고자료
 - https://reactjs-kr.firebaseapp.com/docs/state-and-lifecycle.html
 
+- https://yts.lt/api
 
 ## Axios
 - fetch처럼 데이터를 받아올 때 사용함
@@ -249,3 +250,8 @@ class App extends React.Component {
     this.setState({ movies, isLoading: false })
   }
 ```
+
+- class형 모듈이 여러모로 할 수 있는 게 많지만, state가 필요하지 않다던가 하는 경우에는 굳이 class형 모듈을 쓰지 않고, 간단하게 함수형 모듈을 사용해도 좋음.
+
+- 아래와 같이 api에 정해진 파라미터가 있으니 잘 살펴볼 것
+<img src="api.png">

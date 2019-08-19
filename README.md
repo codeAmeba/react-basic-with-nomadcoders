@@ -255,3 +255,23 @@ class App extends React.Component {
 
 - 아래와 같이 api에 정해진 파라미터가 있으니 잘 살펴볼 것
 <img src="api.png">
+
+- 받아온 Movies를 `map()`메서드로 렌더링
+- key 빼먹으면 에러 남
+```javascript
+  render() {
+    const { isLoading, movies } = this.state;
+    return (
+      <div>{isLoading ? 'Loading...' : movies.map(movie => {
+      return <Movie 
+        key={movie.id}
+        id={movie.id} 
+        year={movie.year} 
+        title={movie.title} 
+        summary={movie.summary} 
+        poster={movie.medium_cover_image} 
+        />
+      })}</div>
+    );
+  }
+```

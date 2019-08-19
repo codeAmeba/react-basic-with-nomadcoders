@@ -24,8 +24,8 @@ class App extends React.Component {
     const { isLoading, movies } = this.state;
     return (
       <div>{isLoading ? 'Loading...' : movies.map(movie => {
-        console.log(movie);
-        return <Movie 
+      return <Movie 
+        key={movie.id}
         id={movie.id} 
         year={movie.year} 
         title={movie.title} 

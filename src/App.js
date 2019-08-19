@@ -6,9 +6,8 @@ class App extends React.Component {
     movies: []
   };
   getMovies = async () => {
-    const movies = await axios.get('https://yts.lt/api/v2/list_movies.json'); 
-    const movieList = movies.data.data.movies; 
-    this.setState({ movie: movieList, isLoading: false });
+    const {data: {data: { movies }}} = await axios.get('https://yts.lt/api/v2/list_movies.json'); 
+    this.setState({ movies, isLoading: false })
   }
   componentDidMount() {
     this.getMovies();

@@ -239,5 +239,13 @@ class App extends React.Component {
   }
 ```
 
-# TIL(190817) - React 05
+# TIL(190819) - React 05
 
+- 내가 필요한 Movie List의 경로는 `movies.data.data.movies`이기 때문에 아래와 같이 단축표현으로 쓰면 좋음.
+- `setState`에서 `movies: movies`로 key와 value의 이름이 같을 때에는 아래와 같이 하나만 써도 됨.
+```javascript
+  getMovies = async () => {
+    const {data: {data: { movies }}} = await axios.get('https://yts.lt/api/v2/list_movies.json'); 
+    this.setState({ movies, isLoading: false })
+  }
+```

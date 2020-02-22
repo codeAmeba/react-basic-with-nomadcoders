@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-basic-with-nomadcoders/static/css/main.f3696f6d.chunk.css",
-    "main.js": "/react-basic-with-nomadcoders/static/js/main.dace1181.chunk.js",
-    "main.js.map": "/react-basic-with-nomadcoders/static/js/main.dace1181.chunk.js.map",
+    "main.js": "/react-basic-with-nomadcoders/static/js/main.3605b5f0.chunk.js",
+    "main.js.map": "/react-basic-with-nomadcoders/static/js/main.3605b5f0.chunk.js.map",
     "runtime~main.js": "/react-basic-with-nomadcoders/static/js/runtime~main.12d856df.js",
     "runtime~main.js.map": "/react-basic-with-nomadcoders/static/js/runtime~main.12d856df.js.map",
     "static/js/2.af5468dd.chunk.js": "/react-basic-with-nomadcoders/static/js/2.af5468dd.chunk.js",
     "static/js/2.af5468dd.chunk.js.map": "/react-basic-with-nomadcoders/static/js/2.af5468dd.chunk.js.map",
     "index.html": "/react-basic-with-nomadcoders/index.html",
-    "precache-manifest.0f9df20949956f90e90d281b2e6d9356.js": "/react-basic-with-nomadcoders/precache-manifest.0f9df20949956f90e90d281b2e6d9356.js",
+    "precache-manifest.e43b1c2e4a5f64154ab79b830530d77e.js": "/react-basic-with-nomadcoders/precache-manifest.e43b1c2e4a5f64154ab79b830530d77e.js",
     "service-worker.js": "/react-basic-with-nomadcoders/service-worker.js",
     "static/css/main.f3696f6d.chunk.css.map": "/react-basic-with-nomadcoders/static/css/main.f3696f6d.chunk.css.map"
   }
